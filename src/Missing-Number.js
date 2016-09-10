@@ -1,6 +1,6 @@
 const missingNumber = nums => {
-  var output = 0;
+  let output = 0;
   nums.forEach( val => output += val);
 
-  return nums.length*(nums.length + 1)/2 - output;
+  return nums.length*(1+nums.length)/2 - output;
 };
