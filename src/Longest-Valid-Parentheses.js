@@ -1,3 +1,5 @@
+"use strict"
+
 const longestValidParentheses = s => {
   let last = -1, stack = [], output = 0;
 
