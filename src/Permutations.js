@@ -1,7 +1,5 @@
 const permute = nums => {
   let output = [];
-  sub(nums, []);
-
   const sub = (left, flow)=> {
     if (!left.length) {
       return output.push(flow);
@@ -12,5 +10,6 @@ const permute = nums => {
       sub(L.concat(R), flow.concat(num));
     });
   }
+  sub(nums, []);
   return output;
 };
