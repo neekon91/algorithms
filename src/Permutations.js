@@ -4,12 +4,8 @@ const permute = nums => {
     if (!left.length) {
       return output.push(flow);
     }
-    left.map((num, i)=> {
-      let R = left.slice(i + 1);
-      let L = left.slice(0, i);
-      sub(L.concat(R), flow.concat(num));
-    });
-  }
+    left.map((_, i)=> sub(left.slice(0, i).concat(left.slice(i + 1)), flow.concat(left[i])) );
+  };
   sub(nums, []);
   return output;
 };
