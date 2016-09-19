@@ -5,7 +5,7 @@ const numIslands = grid => {
   return islands;
 };
 
-const convert = (grid, i, z, islands) => {
+const convert = (grid, i, z) => {
   if(0 <= i &&  i < grid.length && grid[i][z] === '1') {
     grid[i][z] = '.';
 
