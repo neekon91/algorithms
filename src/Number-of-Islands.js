@@ -1,5 +1,4 @@
-const numIslands = grid => {
-  let islands = 0;
+const numIslands = (grid, islands = 0) => {
   grid.map((_, i)=> grid[i].map((_, z)=>
       grid[i][z] === '1' ? convert(grid, i, z, islands++): _));
   return islands;

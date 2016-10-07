@@ -1,7 +1,6 @@
-const subsets = nums => {
-  let output = [];
+const subsets = (nums, output = []) => {
   nums.sort((a, b) => a - b);
-  
+
   const sub = (output, start, end, array, nums) => {
     output.push(array);
     let index = start;
