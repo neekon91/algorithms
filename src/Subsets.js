@@ -1,16 +1,15 @@
 const subsets = (nums, output = []) => {
-  nums.sort((a, b) => a - b);
-
-  const sub = (output, start, end, array, nums) => {
-    output.push(array);
-    let index = start;
-    while (index <= end) {
-        array.push(nums[index]);
-        sub(output, index + 1, end, array.concat(), nums);
-        array.pop();
-        index++;
+  
+  (sub = (output, start, combo, nums) => {
+    output.push(combo);
+    let ind = start;
+    while (ind <= nums.length - 1) {
+      combo = [...combo, nums[ind]];
+      sub(output, ind + 1, combo.concat(), nums);
+      combo.pop();
+      ind++;
     }
-  };
-  sub(output, 0, nums.length - 1, [], nums);
+  })(output, 0, [], nums);
+
   return output;
 };
