@@ -1,6 +1,6 @@
 const combinationSum = (candidates, target, output = []) => {
   candidates.sort((a, b) => a - b);
-  const sub = (candidates, target, init, output, cur) =>{
+  (sub = (candidates, target, init, output, cur) =>{
     if (target === 0)
       return output.push(cur.slice());
 
@@ -10,7 +10,6 @@ const combinationSum = (candidates, target, output = []) => {
       cur.pop();
       init++;
     }
-  };
-  sub(candidates, target, 0, output, cur = []);
+  })(candidates, target, 0, output, cur = []);
   return output;
 };
