@@ -1,14 +1,14 @@
 const subsets = (nums, output = []) => {
 
-  (sub = (output, start, combo, nums) => {
+  (sub = (start, combo) => {
     output.push(combo);
-    while (ind <= nums.length - 1) {
+    while (start <= nums.length - 1) {
       combo = [...combo, nums[start]];
-      sub(output, start + 1, combo.concat(), nums);
+      sub(start + 1, combo.concat());
       combo.pop();
       start++;
     }
-  })(output, 0, [], nums);
+  })(0, []);
 
   return output;
 };

@@ -9,4 +9,4 @@ const insertionSort = nums => {
   return nums;
 }
 
-console.log(insertionSort([5,3,6,3,3,1]))
+console.log(insertionSort([3,5,6,3,3,1]))
