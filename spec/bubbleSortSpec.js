@@ -1,4 +1,4 @@
-describe('binarySearchTree', function() {
+describe('bubbleSort', function() {
   var bubble;
 
 
