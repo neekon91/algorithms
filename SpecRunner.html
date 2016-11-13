@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="./lib/mocha/mocha.css" />
+    <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/mocha/mocha.js"></script>
+    <script src="./lib/chai/chai.js"></script>
+    <script src="./lib/underscore/underscore.js"></script>
+    <script>
+      mocha.setup('bdd');
+      window.expect = chai.expect;
+      $(function() {
+        window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
+      })
+    </script>
+
+    <!-- source files -->
+    <script type="text/javascript" src="src/bubble-sort.js"></script>
+    <script type="text/javascript" src="src/insertion-sort.js"></script>
+    <script type="text/javascript" src="src/merge-sort.js"></script>
+    <script type="text/javascript" src="src/quickSort.js"></script>
+
+
+
+    <!-- spec files -->
+    <script type="text/javascript" src="spec/bubbleSortSpec.js"></script>
+    <script type="text/javascript" src="spec/insertion-sortSpec.js"></script>
+    <script type="text/javascript" src="spec/merge-sortSpec.js"></script>
+    <script type="text/javascript" src="spec/quickSortSpec.js"></script>
+
+
+  </head>
+  <body>
+    <div id="mocha"></div>
+  </body>
+</html>
