@@ -21,7 +21,7 @@ const hasCycle = (linkedList) => {
   }
   return false;
 };
-
+ 
 const hasCycle = head => {
     if(!head) return false;
     if(head.prev) return head.prev;
