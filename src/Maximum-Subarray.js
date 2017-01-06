@@ -1,9 +1,9 @@
-const maxSubArray = (nums, sum = 0)=>
-  nums.reduce((max, val) => {
-    if(sum < 0){
-      sum = 0;
+const maxSubArray = nums =>
+  nums.reduce((memo, val) => {
+    if(memo.sum < 0){
+      memo.sum = 0;
     }
-    sum += val;
-    max = Math.max(sum, max);
-    return max;
-  }, -Infinity);
+    memo.sum += val;
+    memo.max = Math.max(memo.sum, memo.max);
+    return memo;
+  }, {max: -Infinity, sum: 0}).max;
