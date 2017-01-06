@@ -1,9 +1,5 @@
 const lengthOfLongestSubstring = s => {
-    let obj = {},
-    len = 0,
-    max = 0,
-    start = 0,
-    char;
+    let obj = {}, len = 0, max = 0, start = 0, char;
     if(s === null || s.length === 0){
       return 0;
     }

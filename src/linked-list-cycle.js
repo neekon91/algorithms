@@ -11,6 +11,8 @@ const hasCycle = (linkedList, double) => {
 
 };
 
+// solution 2
+// ==============
 const hasCycle = (linkedList) => {
   let gas = true, fast = linkedList;
   let slow = linkedList;
@@ -22,11 +24,13 @@ const hasCycle = (linkedList) => {
   return false;
 };
 
+// solution 3
+// ==============
 const hasCycle = head => {
-    if(!head) return false;
-    if(head.prev) return head.prev;
-    else{
-        head.prev = true;
-        return hasCycle(head.next);
-    }
+  if(!head) return false;
+  if(head.prev) return head.prev;
+  else{
+      head.prev = true;
+      return hasCycle(head.next);
+  }
 };

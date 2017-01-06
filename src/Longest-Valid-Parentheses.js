@@ -1,9 +1,7 @@
-"use strict"
-
 const longestValidParentheses = s => {
   let last = -1, stack = [], output = 0;
 
-  s.split('').map( (val, index)=> {
+  [...s].map((val, index)=> {
     if (val === '(') {
       stack.push(index);
     } else {
@@ -14,7 +12,7 @@ const longestValidParentheses = s => {
         if (0 === stack.length) {
           output = Math.max(index - last, output);
         } else {
-            output = Math.max(index - stack[stack.length - 1], output);
+          output = Math.max(index - stack[stack.length - 1], output);
         }
       }
     }
