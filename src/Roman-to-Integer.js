@@ -15,8 +15,9 @@ const romes = {'I':1, 'IV':4, 'V':5, 'IX':9, 'X':10,'XL':40,'L':50, 'XC':90, 'C'
   }
   return sum;
 };
-// Both solutions work
 
+// solution 2
+// ===================
 const Romes = {
   I: 1,
   V: 5,

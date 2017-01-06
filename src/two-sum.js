@@ -1,7 +1,7 @@
 const twoSum = (nums, target) => {
-  let obj = {}, otherVal, output = [];
+  let obj = {}, output = [];
 
-  nums.map((val, i)=>
+  nums.forEach((val, i)=>
     (target - val in obj) ? output = [...output, obj[target - val], i] : obj[val] = i);
   return output;
 };

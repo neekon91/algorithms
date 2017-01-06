@@ -1,6 +1,5 @@
-const merge = (intervals) => {
+const merge = (intervals, output = []) => {
   intervals.sort((a, b) => a.start - b.start);
-  let output = [];
 
   if(intervals.length) output = [...output, intervals[0]];
 
@@ -13,6 +12,5 @@ const merge = (intervals) => {
       output = [...output, last];
     }
   }
-
   return output;
 };
